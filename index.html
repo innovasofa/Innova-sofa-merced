@@ -19,8 +19,17 @@ body{
 header{
     background:#111;
     color:white;
-    padding:20px;
     text-align:center;
+    padding:35px 20px;
+}
+
+header h1{
+    font-size:38px;
+    margin:0;
+}
+
+header p{
+    font-size:18px;
 }
 
 nav{
@@ -33,25 +42,31 @@ nav a{
     color:white;
     text-decoration:none;
     margin:15px;
+    font-weight:bold;
 }
 
 .hero{
-    background:#ddd;
-    padding:70px 20px;
     text-align:center;
+    padding:70px 20px;
+    background:white;
 }
 
-.hero h1{
+.hero h2{
     font-size:40px;
 }
 
-.boton{
+.hero p{
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
     background:#25D366;
     color:white;
     padding:15px 25px;
-    border-radius:8px;
+    border-radius:30px;
     text-decoration:none;
-    display:inline-block;
+    font-weight:bold;
 }
 
 section{
@@ -59,27 +74,52 @@ section{
     text-align:center;
 }
 
-.productos{
+.cards{
     display:flex;
+    flex-wrap:wrap;
     justify-content:center;
     gap:20px;
-    flex-wrap:wrap;
 }
 
 .card{
     background:white;
-    padding:20px;
-    width:250px;
-    border-radius:10px;
-    box-shadow:0 0 10px #ccc;
+    width:280px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px #ddd;
+}
+
+.card h3{
+    color:#111;
+}
+
+.contacto{
+    background:#111;
+    color:white;
 }
 
 footer{
-    background:#111;
+    background:#000;
     color:white;
     text-align:center;
     padding:20px;
 }
+
+@media(max-width:600px){
+header h1{
+font-size:30px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+nav a{
+display:block;
+margin:10px;
+}
+}
+
 </style>
 
 </head>
@@ -91,6 +131,7 @@ footer{
 <p>Fabricamos sofás modernos y personalizados</p>
 </header>
 
+
 <nav>
 <a href="#">Inicio</a>
 <a href="#sofas">Sofás</a>
@@ -101,11 +142,13 @@ footer{
 
 <div class="hero">
 
-<h1>El sofá perfecto para tu hogar</h1>
+<h2>El sofá perfecto para tu hogar</h2>
 
-<p>Diseños exclusivos, comodidad y fabricación profesional.</p>
+<p>
+Diseños exclusivos, comodidad y fabricación profesional.
+</p>
 
-<a class="boton" href="https://wa.me/56957911919">
+<a class="btn" href="https://wa.me/56957911919">
 Contactar por WhatsApp
 </a>
 
@@ -116,21 +159,29 @@ Contactar por WhatsApp
 
 <h2>Nuestros Sofás</h2>
 
-<div class="productos">
+<div class="cards">
 
 <div class="card">
 <h3>Sofás Modernos</h3>
-<p>Diseños elegantes para tu sala.</p>
+<p>
+Diseños elegantes adaptados a tu espacio.
+</p>
 </div>
+
 
 <div class="card">
 <h3>Sofás Personalizados</h3>
-<p>Fabricamos según tus medidas y estilo.</p>
+<p>
+Creamos el sofá según tus medidas y estilo.
+</p>
 </div>
 
+
 <div class="card">
-<h3>Alta Calidad</h3>
-<p>Materiales resistentes y acabados profesionales.</p>
+<h3>Calidad Profesional</h3>
+<p>
+Materiales resistentes y acabados premium.
+</p>
 </div>
 
 </div>
@@ -143,21 +194,24 @@ Contactar por WhatsApp
 <h2>Sobre Nosotros</h2>
 
 <p>
-En Innova Sofá Merced creamos muebles con pasión,
-calidad y atención al detalle para transformar hogares.
+En Innova Sofá Merced transformamos ideas en muebles únicos.
+Nuestro objetivo es crear sofás cómodos, modernos y duraderos para cada hogar.
 </p>
 
 </section>
 
 
-<section id="contacto">
+<section id="contacto" class="contacto">
 
-<h2>Contacto</h2>
+<h2>Contáctanos</h2>
 
 <p>WhatsApp: +56 957911919</p>
 
-<a class="boton" href="https://wa.me/56957911919">
-Escríbenos ahora
+<p>Instagram: @innovasofamerced</p>
+
+
+<a class="btn" href="https://wa.me/56957911919">
+Enviar mensaje
 </a>
 
 </section>
