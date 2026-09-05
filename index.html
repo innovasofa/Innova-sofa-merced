@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Innova Sofa Merced | Sofás modernos y personalizados</title>
+
+  <meta name="description" content="Innova Sofa Merced. Fabricamos sofás modernos, cómodos y personalizados para tu hogar. Calidad, diseño y atención personalizada.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #f8f6f2;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #171717;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4a574;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #c89562;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background: #a9784b;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid white;
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    }
+
+    .about h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .features {
+      background: white;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #f8f6f2;
+      padding: 32px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #eee;
+    }
+
+    .card .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform .3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .cta {
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(20,20,20,.88), rgba(20,20,20,.88)),
+        url("https://images.unsplash.com/photo-1550226891-ef816aed4a98?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-item {
+      margin: 18px 0;
+      font-size: 18px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .contact-item a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 7%;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 300px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">INNOVA SOFA MERCED</div>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1>Sofás que transforman tu hogar</h1>
+
+    <p>
+      Diseño, comodidad y calidad en cada detalle.
+      Fabricamos sofás pensados para hacer de tu espacio
+      un lugar más elegante y confortable.
+    </p>
+
+    <a class="btn" href="#contacto">Solicitar información</a>
+
+    <a class="btn btn-outline" href="tel:+56957911919">
+      Llamar ahora
+    </a>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="about">
+
+    <img
+      src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1200&q=85"
+      alt="Sofá moderno Innova Sofa"
+    >
+
+    <div>
+      <h2>Diseño que se adapta a ti</h2>
+
+      <p>
+        En <strong>Innova Sofa Merced</strong> nos especializamos
+        en la fabricación de sofás modernos, cómodos y elegantes.
+      </p>
+
+      <p>
+        Trabajamos cuidando cada detalle para ofrecer productos
+        de calidad que combinen diseño, funcionalidad y confort.
+      </p>
+
+      <p>
+        Nuestro objetivo es ayudarte a encontrar el sofá perfecto
+        para tu hogar.
+      </p>
+
+      <a class="btn" href="#contacto">Contáctanos</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="features" id="servicios">
+
+  <div class="section-title">
+    <h2>¿Por qué elegirnos?</h2>
+    <p>Calidad y atención en cada proyecto.</p> 
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🛋️</div>
+      <h3>Diseños modernos</h3>
+      <p>
+        Modelos actuales que aportan estilo y personalidad
+        a cualquier espacio.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⭐</div>
+      <h3>Calidad</h3>
+      <p>
+        Seleccionamos materiales pensando en la comodidad,
+        resistencia y durabilidad.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>Atención personalizada</h3>
+      <p>
+        Te acompañamos para encontrar la opción que mejor
+        se adapte a tus necesidades.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="galeria">
+
+  <div class="section-title">
+    <h2>Nuestros sofás</h2>
+    <p>Inspiración para tu próximo espacio.</p>
+  </div>
+
+  <div class="gallery">
+
+    <img
+      src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85"
+      alt="Sofá moderno"
+    >
+
+    <img
+      src="https://images.unsplash.com/photo-1550226891-ef816aed4a98?auto=format&fit=crop&w=900&q=85"
+      alt="Sofá elegante"
+    >
+
+    <img
+      src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=900&q=85"
+      alt="Sofá para sala"
+    >
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>¿Buscas un sofá nuevo?</h2>
+
+  <p>
+    Habla con Innova Sofa Merced y descubre nuestras opciones.
+  </p>
+
+  <a class="btn" href="tel:+56957911919">
+    📞 957 911 919
+  </a>
+
+  <a
+    class="btn"
+    href="https://wa.me/56957911919"
+    target="_blank"
+  >
+    💬 WhatsApp
+  </a>
+
+</section>
+
+<section class="contact" id="contacto">
+
+  <div class="section-title">
+    <h2>Contáctanos</h2>
+    <p>Estamos listos para atenderte.</p>
+  </div>
+
+  <div class="contact-box">
+
+    <div class="contact-item">
+      <strong>Teléfono</strong>
+      <a href="tel:+56957911919">
+        +56 9 5791 1919
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <strong>WhatsApp</strong>
+      <a href="https://wa.me/56957911919" target="_blank">
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <strong>Instagram</strong>
+      <a href="#" target="_blank">
+        Síguenos en Instagram
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>
+    © 2026 <strong>Innova Sofa Merced</strong>.
+    Todos los derechos reservados.
+  </p>
+</footer>
+
+</body>
+</html>
